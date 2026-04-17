@@ -13,18 +13,11 @@ test.describe('Roles page Test - 001 ', () => {
         await page.locator('[class="rz-menu rz-profile-menu"]').waitFor({ state: 'visible', timeout: 60000 })
         await expect(page.locator('[class="rz-menu rz-profile-menu"]')).toBeVisible()
 
-
         // test('Administration visible  ', async ({ page }) => {
-
         await expect(page.getByText('Administrator')).toBeVisible()
         await page.getByText('Administrator').click()
-
-
         // const admin = new Admin(page)
         // admin.verifyAdmin()
-
-
-
         //})
 
         // test('Roles section   -    , async ({ page }) => {
@@ -33,7 +26,6 @@ test.describe('Roles page Test - 001 ', () => {
         await page.getByRole('link', { name: 'Roles' }).click()
 
         // added to common.ts
-
 
         //  await page.locator('span').filter({hasText:'Roles'}).first().waitFor({state:'visible', timeout:60000}) ---- doubt on locator
         // await page.locator('span').filter({ hasText: 'Roles' }).first().click()   ---- doubt on locator
