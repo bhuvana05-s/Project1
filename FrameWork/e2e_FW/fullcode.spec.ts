@@ -4,7 +4,6 @@ test.describe('Roles page Test - 001 ', () => {
 
     test('CMS login', async ({ page }) => {
 
-        
         await page.goto('https://testcms.reco-claims.ca/Login')
         await page.getByRole('textbox', { name: 'Username' }).fill('info+programmanager@xlgclaims.com')
         await page.getByRole('textbox', { name: 'Password' }).fill('Test1234!')
@@ -32,6 +31,9 @@ test.describe('Roles page Test - 001 ', () => {
 
         // })
 
+
+
+
         // test('Roles page - addApplicationRole popup  -   visible and navigation ', async ({ page }) => {
 
         await page.getByRole('heading', { name: 'Roles' }).waitFor({ state: 'visible',timeout: 60000 })
@@ -43,6 +45,8 @@ test.describe('Roles page Test - 001 ', () => {
         await expect(page.locator('[class="rzi rzi-times"]')).toBeVisible()
 
         // })
+
+
 
 
 
